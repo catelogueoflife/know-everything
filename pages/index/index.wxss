@@ -1,0 +1,54 @@
+/**index.wxss**/
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    /*padding: 10px 20px;*/
+    overflow: hidden;
+    background: white;
+}
+
+.item-normal {
+    margin: 20px 15px;
+    box-shadow: -5px 5px 10px lightgray;
+}
+
+.item-normal,.item-focus{
+    border-radius: 20px;
+}
+
+.item-opened {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.item-img {
+    background-position: center;
+    background-size: cover;
+}
+
+.item-header {
+    padding: 20px 25px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.item-header .item-tag {
+    font-size: 16px;
+    font-weight: 600;
+    color: lightgray;
+}
+
+.item-header .item-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+

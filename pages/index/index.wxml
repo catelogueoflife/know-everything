@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container"
+      style="width:{{clientWidth}}px;height:{{clientHeight}}px;padding-top:{{notificationBarHeight+titleBarHeight}}px">
+    <view class="header">
+        今日推荐
+    </view>
+    <view class="main-list">
+
+        <scroll-view wx:for="{{itemData}}"
+                     wx:key="id"
+                     scroll-y="{{item.opened}}"
+                     scroll-top="{{item.opened?'auto':0}}"
+                     animation="{{item.animation}}"
+                     class="{{item.class}}"
+                     data-id="{{item.id}}"
+                     style="width:{{item.width}}px;height:{{item.height}}px;"
+                     hover-class="item-focus" hover-start-time="0"
+                     bindtouchstart="startTouchItem"
+                     bindtouchend="endTouchItem"
+                     bindtap="tapToOpen">
+            <view style="width:{{item.width}}px;height:{{item.imgHeight}}px;background-image:url('{{item.src}}')"
+                  hover-class="item-focus" class="item-img">
+                <view class="item-header">
+                    <view class="item-tag">哺乳纲的大型猫科动物</view>
+                    <view class="item-name">虎</view>
+                </view>
+            </view>
+            <view style="width:{{clientWidth-30}}px;padding:10px 15px;">{{item.desc}}</view>
+        </scroll-view>
+    </view>
+</view>

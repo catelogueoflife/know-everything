@@ -1,0 +1,18 @@
+<view class="main-list" style="width:{{clientWidth}}px;">
+    <view wx:for="{{itemData}}" wx:key="id" class="{{item.class}}"
+          style="width:{{item.cardWidth}}px;height:{{item.cardHeight}}px;"
+          bindtap="cardOpen" data-id="{{item.id}}" id="card{{item.id}}" animation="{{item.animation}}">
+        <view style="width:{{item.cardWidth}}px;height:{{item.imgHeight}}px;background-image:url('{{item.src}}')"
+              class="item-img">
+            <view class="item-header">
+                <view class="item-tag">{{item.tag}}</view>
+                <view class="item-name">{{item.title}}</view>
+            </view>
+        </view>
+        <view class="content-wrapper">
+            <view class="content">
+                {{item.desc}}
+            </view>
+        </view>
+    </view>
+</view>
